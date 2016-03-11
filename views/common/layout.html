@@ -1,0 +1,27 @@
+{% extends '../widget/header.html' %}
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ title }}</title>
+	{% block style %}
+	<link rel="stylesheet" href="meterialize/css/meterialize.min.css">
+	{% endblock %}
+</head>
+<body>
+{% block header%}
+	{% include '../widget/header.html'%}
+{% endblock %}
+
+{% block content%}{% endblock %}
+
+{% block footer%}
+	{% include "../widget/footer.html" %}
+{% endblock %}
+
+{% block common_scripts %}
+<script src="scripts/jQuery/jquery-1.12.1.min.js"></script>
+{% endblock %}
+</body>
+</html>

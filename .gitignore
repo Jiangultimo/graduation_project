@@ -168,3 +168,6 @@ pip-log.txt
 todo.md
 
 output/**
+
+# node_module
+**/node_module
