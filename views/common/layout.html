@@ -1,12 +1,10 @@
-{% extends '../widget/header.html' %}
-
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
 	<meta charset="UTF-8">
 	<title>{{ title }}</title>
 	{% block style %}
-	<link rel="stylesheet" href="materialize/css/meterialize.min.css">
+	<link rel="stylesheet" href="../materialize/css/materialize.min.css">
 	{% endblock %}
 </head>
 <body>
@@ -22,7 +20,7 @@
 
 {% block common_scripts %}
 <script src="scripts/jQuery/jquery-1.12.1.min.js"></script>
-<script src="meterialize/js/materialize.min.js"></script>
+<script src="/materialize/js/materialize.min.js"></script>
 {% endblock %}
 </body>
 </html>
