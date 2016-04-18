@@ -1,1 +1,42 @@
-<h1>i am header</h1>
+<nav class="red">
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Logo</a>
+        <a href="javasript:;" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="#modal" id="modal-trigger">开始背单词</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- 登录 -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h4>(●˘◡˘●)登录开始背单词</h4>
+        <form class="col s12 login-form">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="user" type="text" class="validate">
+                    <label for="user">账号</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">密码</label>
+                </div>
+            </div>
+            <img class="login-img" src="../images/wombat-head-login.svg" alt="登录">
+            <a href="javascript:;" class="waves-effect waves-light btn red"><i class="material-icons left">vpn_key</i>登录</a>
+            <a href="signup.html" class="waves-effect waves-light btn white black-text left-button"><i class="material-icons left black-text">supervisor_account</i>注册</a>
+        </form>
+    </div>
+</div>

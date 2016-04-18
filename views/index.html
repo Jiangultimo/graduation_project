@@ -1,13 +1,19 @@
 {% extends 'common/layout.html' %}
+
 {% block header %}
-	{%parent%}
+    {%parent%}
 {% endblock %}
 
 {% block content %}
- <p>i am the content</p>
+    <p>i am the content</p>
 {% endblock %}
 
 {% block scripts%}
-	{%parent%}
-	<script src="scripts/baiduTran.js"></script>
+    {%parent%}
+    <script src="scripts/baiduTran.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#modal-trigger').leanModal();
+        });
+    </script>
 {% endblock %}
