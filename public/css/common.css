@@ -15,4 +15,34 @@
 .modal-content .left-button {
   margin-left: 66px; }
 
+nav .brand-logo {
+  background: url("../images/logo.png") no-repeat transparent scroll 0 0;
+  text-indent: -999em;
+  width: 64px; }
+
+footer.page-footer {
+  margin-top: 0; }
+
+.mask {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 500px;
+  transition: all .5s ease-in-out; }
+
+/*reset style*/
+input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]) {
+  border-bottom: 1px solid #f44336;
+  box-shadow: 0 1px 0 0 #f44336; }
+
+input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label {
+  color: #9e9e9e; }
+
+input[type=text].valid, input[type=text]:focus.valid, input[type=password].valid, input[type=password]:focus.valid {
+  border-bottom: 1px solid #f44336;
+  box-shadow: 0 1px 0 0 #f44336; }
+
 /*# sourceMappingURL=common.css.map */

@@ -24,7 +24,10 @@
 <script src="scripts/jQuery/jquery-1.12.1.min.js"></script>
 <script src="/materialize/js/materialize.min.js"></script>
 <script>
-	$(".button-collapse").sideNav();
+	$(document).ready(function(){
+		$(".button-collapse").sideNav();
+		$('.J-trigger').leanModal();
+	});
 </script>
 {% endblock %}
 </body>

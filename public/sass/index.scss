@@ -1,0 +1,38 @@
+.collection {
+  border: none;
+}
+
+.collection.with-header .collection-header {
+  text-align: center;
+  border: none;
+  h4 {
+    margin: 0;
+  }
+}
+
+.collection .collection-item {
+  border-bottom: none;
+  text-align: center;
+}
+
+.icon-content {
+  margin-bottom: 0;
+}
+
+.icon-font {
+  font-size: 50px;
+}
+
+.collapsible {
+  border: none;
+  box-shadow: none;
+}
+
+.method-number {
+  font-style: normal;
+  font-size: 12px;
+  color: #999;
+}
+.collapsible.popout>li{
+  box-shadow: none;
+}

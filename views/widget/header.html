@@ -1,24 +1,43 @@
 <nav class="red">
-    <div class="nav-wrapper">
+    <div class="nav-wrapper container">
         <a href="/" class="brand-logo">Logo</a>
-        <a href="javasript:;" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="javasript:;" data-activates="mobile-demo" class="button-collapse"><i
+                class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="#modal" id="modal-trigger">开始背单词</a></li>
+            <li><a href="sass.html">艾宾浩斯遗忘曲线</a></li>
+            <li><a href="badges.html">单词查找</a></li>
+            <li><a href="collapsible.html">翻译</a></li>
+            <li>
+                {% if user %}
+                <a href="start.html" class="J-trigger">开始背单词</a>
+                {% else %}
+                <a href="#modal" class="J-trigger">开始背单词</a>
+                {% endif%}
+            </li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
+            <li>
+                <a href="sass.html">Sass</a>
+            </li>
+            <li>
+                <a href="badges.html">Components</a>
+            </li>
+            <li>
+                <a href="collapsible.html">Javascript</a>
+            </li>
+            <li>
+                {% if user %}
+                <a href="start.html" class="J-trigger">开始背单词</a>
+                {% else %}
+                <a href="#modal" class="J-trigger">开始背单词</a>
+                {% endif%}
+            </li>
         </ul>
     </div>
 </nav>
 
 <!-- 登录 -->
-<div id="modal" class="modal">
+<div id="modal" class="modal" style="max-width:600px;">
     <div class="modal-content">
         <h4>(●˘◡˘●)登录开始背单词</h4>
         <form class="col s12 login-form">
@@ -36,7 +55,8 @@
             </div>
             <img class="login-img" src="../images/wombat-head-login.svg" alt="登录">
             <a href="javascript:;" class="waves-effect waves-light btn red"><i class="material-icons left">vpn_key</i>登录</a>
-            <a href="signup.html" class="waves-effect waves-light btn white black-text left-button"><i class="material-icons left black-text">supervisor_account</i>注册</a>
+            <a href="signup" class="waves-effect waves-light btn white black-text left-button"><i
+                    class="material-icons left black-text">supervisor_account</i>注册</a>
         </form>
     </div>
 </div>

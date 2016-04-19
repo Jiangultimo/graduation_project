@@ -1,19 +1,143 @@
 {% extends 'common/layout.html' %}
 
+{% block style%}
+{% parent %}
+<link rel="stylesheet" href="../css/index.css">
+{% endblock %}
+
 {% block header %}
-    {%parent%}
+{%parent%}
 {% endblock %}
 
 {% block content %}
-    <p>i am the content</p>
+<div id="index-banner" class="parallax-container">
+    <div class="mask">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br><br>
+                <h1 class="header center white-text">什么是高效背单词？</h1>
+                <div class="row center">
+                    <h5 class="header col s12 light white-text">根据艾宾浩斯遗忘曲线定制背单词计划</h5>
+                </div>
+                <div class="row center">
+                    <a href="http://materializecss.com/getting-started.html" id="download-button"
+                       class="btn-large waves-effect waves-light red lighten-1">查看艾宾浩斯遗忘曲线</a>
+                </div>
+                <br><br>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="../images/0.png" alt="Unsplashed background img 1"></div>
+</div>
+
+<div class="section white">
+    <div class="section">
+        <!--   Icon Section   -->
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center red-text icon-content"><i class="material-icons icon-font">location_on</i></h2>
+                    <ul class="collection with-header">
+                        <li class="collection-header"><h4>复习点的确定</h4></li>
+                        <li class="collection-item">第一个记忆周期：5分钟</li>
+                        <li class="collection-item">第二个记忆周期：30分钟</li>
+                        <li class="collection-item">第三个记忆周期：12小时</li>
+                        <li class="collection-item">第四个记忆周期：1天</li>
+                        <li class="collection-item">第五个记忆周期：2天</li>
+                        <li class="collection-item">第六个记忆周期：4天</li>
+                        <li class="collection-item">第七个记忆周期：7天</li>
+                        <li class="collection-item">第八个记忆周期：15天</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center red-text"><i class="material-icons icon-font">thumb_up</i></h2>
+                    <h5 class="center">背诵方法</h5>
+                    <ul class="collapsible popout" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header active">
+                                <i class="method-number">1.</i>初记单词时需要记忆的内容
+                            </div>
+                            <div class="collapsible-body">
+                                <p>
+                                    单词外观;<br />
+                                    单词的中文释义;<br />
+                                    单词的记忆法
+                                </p>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="method-number">2.</i>每个list的具体背诵过程
+                            </div>
+                            <div class="collapsible-body">
+                                <p>
+                                    1.背完一页（大约5分钟），立即返回该页第一个单词开始复习（大约几十秒）;<br />
+                                    2.按上面方法背完1～6页（大约在30分钟），回到第1页开始复习（两三分钟）;<br />
+                                    3.按上面同样方法背完7～12页，一个list结束;<br />
+                                    4.相当于每个list被分为12个小的单元，每个小的单元自成一个复习系统；每6个小单元组成一个大单元，2个大单元各自成为一个复习系统。背一个list总共需要一小时左右的时间。
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="method-number">3.</i>复习过程
+                            </div>
+                            <div class="collapsible-body">
+                                <p>
+                                    1.复习方法：遮住中文释义，尽力回忆该单词的意思，几遍下来都记不住的单词可以做记号重点记忆;<br />
+                                    2.复习一个list所需的时间为20分钟以内;<br />
+                                    3.当天的list最好在中午之前背完，大约12小时之后（最好睡觉前）复习当天所背的list;<br />
+                                    4.在其后的1，2，4，7，15天后分别复习当日所背的list
+
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="method-number">4.</i>注意事项
+                            </div>
+                            <div class="collapsible-body">
+                                <p>
+                                    1.每天连续背诵2个list，并完成复习任务；<br />
+                                    2.复习永远比记新词重要，要反复高频率的复习，复习，再复习；<br />
+                                    3.一天都不能间断，坚持挺过这15天，之后每天都要花大约1小时复习；<br />
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center red-text"><i class="material-icons icon-font">visibility</i></h2>
+                    <h5 class="center">最重要的一点</h5>
+
+                    <p class="light" style="text-align: center;line-height:2;">
+                       为什么背不了单词？<br />
+                        <b>归根到底就是两点：没有毅力和没有良好的背单词习惯。</b><br />
+                        下定决心，不要重在参与。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 {% endblock %}
 
 {% block scripts%}
-    {%parent%}
-    <script src="scripts/baiduTran.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#modal-trigger').leanModal();
+{%parent%}
+<script>
+    $(document).ready(function () {
+        $('.parallax').parallax();
+        $('.collapsible').collapsible({
+            accordion: false
         });
-    </script>
+    });
+</script>
 {% endblock %}
