@@ -6,7 +6,36 @@
 {% endblock %}
 
 {% block content %}
-<p>我是注册</p>
+<div class="row container">
+    <h4>加入高效背单词</h4>
+    <form class="col s6 signup-info" method="post" action="/signup">
+        <div class="row">
+            <!--<div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="nickname" type="text" class="validate" name="nickname">
+                <label for="email">昵称</label>
+            </div>-->
+            <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="email" type="text" class="validate" name="email">
+                <label for="email">邮箱</label>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">lock</i>
+                <input id="password" type="password" class="validate" name="password">
+                <label for="password">密码</label>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">lock</i>
+                <input id="re_password" type="password" class="validate" name="re_password">
+                <label for="re_password">重复密码</label>
+            </div>
+        </div>
+        <button class="btn waves-effect waves-light red right" type="submit">注册
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+</div>
 {% endblock %}
 
 {% block scripts%}

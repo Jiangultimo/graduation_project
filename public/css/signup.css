@@ -1,3 +1,16 @@
+.container .signup-info.s6 {
+  display: block;
+  margin: 0 auto;
+  float: none;
+  margin-top: 50px; }
+.container h4 {
+  padding: 50px 0 20px 0;
+  text-align: center;
+  color: #888;
+  border-bottom: 1px solid #ccc;
+  font-weight: 200; }
 
+.input-field .prefix.active {
+  color: #f44336; }
 
 /*# sourceMappingURL=signup.css.map */
