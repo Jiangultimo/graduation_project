@@ -1,6 +1,7 @@
 var mongo = require('./db');
 
 var User = function (user) {
+    this.nickname = user.nickname;
     this.email = user.email;
     this.password = user.password;
 };
@@ -10,6 +11,7 @@ module.exports = User;
 //存储用户信息
 User.prototype.save = function (callback) {
     var user = {//用户信息
+        nickname: this.nickname,
         email: this.email,
         password: this.password
     };

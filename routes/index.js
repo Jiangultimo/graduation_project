@@ -14,13 +14,42 @@ router.get('/', function (req, res, next) {
 });
 
 /*
- * 注册
+ * 登录
  * */
-router.get('/signup', function (req, res, next) {
-    res.render('signup', {title: '加入高效背单词'});
+router.post('/login', function (req, res, next) {
+    var md5 = crypto.createHash('md5'),
+        password = md5.update(req.body.password).digest('hex');
+    //检测用户是否存在
+    User.get(req.body.email, function (err, user) {
+        if (!user) {
+            req.flash('error', '密码或用户名错误！');
+            return res.redirect('/signup');
+        }
+        //检测密码是否一致
+        if (user.password != password) {
+            req.flash('error', '密码错误');
+            console.log('no password');
+            return res.redirect('/signup');
+        }
+        req.session.user = user;
+        req.flash('success', '登录成功');
+        res.redirect('/');
+    });
 });
-router.post('/signup', function (req, res, next) {
+
+/*
+ * 登出
+ * */
+router.get('/logout', function (req, res) {
+    req.session.user = null;
+    req.flash('success', '注销成功');
+    res.redirect('/');
+});
+
+router.post('/signup', function (req, res) {
+    console.log(22);
     var email = req.body.email,
+        nickname = req.body.nickname,//昵称
         password = req.body.password,//密码
         re_password = req.body.re_password;//重复密码
     if (re_password !== password) {
@@ -31,6 +60,7 @@ router.post('/signup', function (req, res, next) {
     var md5 = crypto.createHash('md5'),
         password = md5.update(password).digest('hex');
     var newUser = new User({
+        nickname: nickname,
         email: email,
         password: password
     });
@@ -54,44 +84,10 @@ router.post('/signup', function (req, res, next) {
                 }
                 req.session.user = newUser;
                 req.flash('success', '注册成功');
-                res.redirect('/');
+                res.redirect('/index');
             }
         );
     });
 });
 
-/*
- * 登录
- * */
-router.post('/login', function (req, res, next) {
-    var md5 = crypto.createHash('md5'),
-        password = md5.update(req.body.password).digest('hex');
-    //检测用户是否存在
-    User.get(req.body.email, function (err, user) {
-        if (!user) {
-            req.flash('error', '密码或用户名错误！');
-            console.log('no user');
-            return res.redirect('/signup');
-        }
-        //检测密码是否一致
-        if (user.password != password) {
-            req.flash('error', '密码错误');
-            console.log(user.email);
-            console.log(user.password + ' '+ password);
-            console.log('no password');
-            return res.redirect('/signup');
-        }
-        req.session.user = user;
-        req.flash('success', '登录成功');
-        res.redirect('/');
-    });
-});
-/*
- * 登出
- * */
-router.get('/logout', function (req, res) {
-    req.session.user = null;
-    req.flash('success', '注销成功');
-    res.redirect('/');
-});
 module.exports = router;

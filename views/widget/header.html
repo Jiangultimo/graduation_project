@@ -4,21 +4,24 @@
         <a href="javasript:;" data-activates="mobile-demo" class="button-collapse"><i
                 class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html">艾宾浩斯遗忘曲线</a></li>
+            <li><a href="/ebbinghaus">艾宾浩斯遗忘曲线</a></li>
             <li><a href="badges.html">单词查找</a></li>
             <li><a href="collapsible.html">翻译</a></li>
             <li>
                 {% if user %}
-                <a href="/logout">欢迎{{ user.email }},开始背单词</a>
+                <a href="javascript:;" class='dropdown-button red btn' data-activates='dropdown'> 欢迎{{ user.nickname }}</a>
+                <ul id='dropdown' class='dropdown-content'>
+                    <li><a href="/start" class="red-text">开始背单词</a></li>
+                    <li><a href="/logout" class="red-text">注销</a></li>
+                </ul>
                 {% else %}
                 <a href="#modal" class="J-trigger">开始背单词</a>
-                {{ user }}
                 {% endif%}
             </li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
             <li>
-                <a href="sass.html">艾宾浩斯遗忘曲线</a>
+                <a href="/ebbinghaus ">艾宾浩斯遗忘曲线</a>
             </li>
             <li>
                 <a href="badges.html">单词查找</a>
@@ -28,7 +31,7 @@
             </li>
             <li>
                 {% if user %}
-                <a href="start.html">欢迎{{ user.nickname }},开始背单词</a>
+                <a href="javascript:;">欢迎{{ user.nickname }},开始背单词</a>
                 {% else %}
                 <a href="#modal" class="J-trigger">开始背单词</a>
                 {% endif %}
@@ -55,7 +58,8 @@
                 </div>
             </div>
             <img class="login-img" src="../images/wombat-head-login.svg" alt="登录">
-            <button type="submit" class="waves-effect waves-light btn red"><i class="material-icons left">vpn_key</i>登录</button>
+            <button type="submit" class="waves-effect waves-light btn red"><i class="material-icons left">vpn_key</i>登录
+            </button>
             <a href="signup" class="waves-effect waves-light btn white black-text left-button">
                 <i class="material-icons left black-text">supervisor_account</i>注册</a>
         </form>

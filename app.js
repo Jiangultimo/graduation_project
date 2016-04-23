@@ -7,7 +7,10 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
+var index = require('./routes/index');//主页
+var signup = require('./routes/signup');//注册
+var ebbinghaus = require('./routes/ebbinghaus');//艾宾浩斯遗忘曲线
+
 var setting = require('./setting');
 var flash = require('connect-flash');
 var users = require('./routes/users');
@@ -43,10 +46,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/index', index);
-app.use('/signup', index);
 app.use('/login', index);
 app.use('/logout',index);
-app.use('/users', users);
+app.use('/signup', signup);
+app.use('/ebbinghaus',ebbinghaus);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

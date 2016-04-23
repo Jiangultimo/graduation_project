@@ -45,4 +45,7 @@ input[type=text].valid, input[type=text]:focus.valid, input[type=password].valid
   border-bottom: 1px solid #f44336;
   box-shadow: 0 1px 0 0 #f44336; }
 
+.dropdown-content li > a, .dropdown-content li > span {
+  padding: .5rem 1rem; }
+
 /*# sourceMappingURL=common.css.map */
