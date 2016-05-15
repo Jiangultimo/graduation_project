@@ -48,4 +48,11 @@ input[type=text].valid, input[type=text]:focus.valid, input[type=password].valid
 .dropdown-content li > a, .dropdown-content li > span {
   padding: .5rem 1rem; }
 
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #ff3c00; }
+
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #ff3c00;
+  box-shadow: 0 1px 0 0 #ff3c00; }
+
 /*# sourceMappingURL=common.css.map */

@@ -1,0 +1,25 @@
+{% extends 'common/layout.html' %}
+
+{% block style%}
+{% parent %}
+<link rel="stylesheet" href="../css/index.css">
+{% endblock %}
+
+{% block header %}
+{%parent%}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block scripts%}
+{%parent%}
+<script>
+    $(document).ready(function () {
+        $('.parallax').parallax();
+        $('.collapsible').collapsible({
+            accordion: false
+        });
+    });
+</script>
+{% endblock %}

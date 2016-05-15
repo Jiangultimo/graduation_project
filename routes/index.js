@@ -28,7 +28,6 @@ router.post('/login', function (req, res, next) {
         //检测密码是否一致
         if (user.password != password) {
             req.flash('error', '密码错误');
-            console.log('no password');
             return res.redirect('/signup');
         }
         req.session.user = user;
@@ -47,11 +46,14 @@ router.get('/logout', function (req, res) {
 });
 
 router.post('/signup', function (req, res) {
-    console.log(22);
     var email = req.body.email,
         nickname = req.body.nickname,//昵称
         password = req.body.password,//密码
+        planName = req.body.planName,
         re_password = req.body.re_password;//重复密码
+    if( planName == null || planName.length === 0 ){
+        planName = '';
+    }
     if (re_password !== password) {
         req.flash('error', '两次输入密码不一致');
         return res.redirect('/signup');
@@ -62,7 +64,8 @@ router.post('/signup', function (req, res) {
     var newUser = new User({
         nickname: nickname,
         email: email,
-        password: password
+        password: password,
+        planName:planName
     });
 
 //    检测用户名是否存在

@@ -5,13 +5,13 @@
                 class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="/ebbinghaus">艾宾浩斯遗忘曲线</a></li>
-            <li><a href="badges.html">单词查找</a></li>
-            <li><a href="collapsible.html">翻译</a></li>
+            <li><a href="/lookup">单词查找</a></li>
+            <li><a href="/translation">翻译</a></li>
             <li>
                 {% if user %}
                 <a href="javascript:;" class='dropdown-button red btn' data-activates='dropdown'> 欢迎{{ user.nickname }}</a>
                 <ul id='dropdown' class='dropdown-content'>
-                    <li><a href="/start" class="red-text">开始背单词</a></li>
+                    <li><a href="#start" class="red-text J-start">开始背单词</a></li>
                     <li><a href="/logout" class="red-text">注销</a></li>
                 </ul>
                 {% else %}
@@ -24,10 +24,10 @@
                 <a href="/ebbinghaus ">艾宾浩斯遗忘曲线</a>
             </li>
             <li>
-                <a href="badges.html">单词查找</a>
+                <a href="/lookup">单词查找</a>
             </li>
             <li>
-                <a href="collapsible.html">翻译</a>
+                <a href="/translation">翻译</a>
             </li>
             <li>
                 {% if user %}

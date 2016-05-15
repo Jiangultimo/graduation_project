@@ -9,7 +9,9 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');//主页
 var signup = require('./routes/signup');//注册
+var start = require('./routes/start');//开始背单词
 var ebbinghaus = require('./routes/ebbinghaus');//艾宾浩斯遗忘曲线
+var translation  = require('./routes/translation');//翻译
 
 var setting = require('./setting');
 var flash = require('connect-flash');
@@ -24,7 +26,7 @@ var swig = require('swig');
 app.use(session({
     secret: setting.cookieSecret,
     ket: setting.db,//设置cookie name
-    cookie: {maxAge: 1000 },//设置过期时间为一个月
+    cookie: {maxAge: 1000*60*60*30 },//设置过期时间为一个月
     store: new MongoStore({
         url: 'mongodb://localhost/words'
     })
@@ -50,6 +52,8 @@ app.use('/login', index);
 app.use('/logout',index);
 app.use('/signup', signup);
 app.use('/ebbinghaus',ebbinghaus);
+app.use('/start',start);
+app.use('/translation',translation);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

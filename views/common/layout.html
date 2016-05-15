@@ -20,21 +20,25 @@
 	{% include "../widget/footer.html" %}
 {% endblock %}
 
+
+{% block planModal%}
+	{% include "../widget/plan.html" %}
+{% endblock%}
 {% block scripts %}
 <script src="scripts/jQuery/jquery-1.12.1.min.js"></script>
 <script src="/materialize/js/materialize.min.js"></script>
 <script>
 	$(document).ready(function(){
 		$(".button-collapse").sideNav();
-		$('.J-trigger').leanModal();
+		$('.J-trigger,.J-start').leanModal();
 		$('.dropdown-button').dropdown({
 					inDuration: 300,//动画时间
 					outDuration: 300,
-					constrain_width: true, // Does not change width of dropdown to that of the activator
-					hover: false, // Activate on hover
-					gutter: 0, // Spacing from edge
-					belowOrigin: true, // Displays dropdown below the button
-					alignment: 'left' // Displays dropdown with edge aligned to the left of button
+					constrain_width: true,
+					hover: false,
+					gutter: 0,
+					belowOrigin: true,
+					alignment: 'left'
 				}
 		);
 	});

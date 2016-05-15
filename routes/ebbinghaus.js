@@ -1,3 +1,4 @@
+var User = require('../models/user');
 var express = require('express');
 var router = express.Router();
 
@@ -7,6 +8,7 @@ router.get('/', function (req, res) {
         title: '艾宾浩斯遗忘曲线',
         user: req.session.user
     });
+
 });
 
 module.exports = router;
