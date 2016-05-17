@@ -10,6 +10,169 @@
 {% endblock %}
 
 {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col s9">
+            <ul class="collapsible popout" data-collapsible="expandable">
+
+                {% for item in word_arr %}
+                <li>
+                    <div class="collapsible-header active">
+                        <i class="method-number"></i>{{item.word_name}}
+                    </div>
+                    <div class="collapsible-body">
+                        <span class="J-wordMean" style="display: none;">{{ item.word_mean}}</span>
+                        <p></p>
+                    </div>
+                </li>
+                {% endfor %}
+
+                <li>
+                    <div class="collapsible-header active">
+                        <i class="method-number"></i>hello 英[hə'ləʊ; he-],美[hɛˈlo, hə-]
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            释义：
+                            <br/> int. 喂；哈罗
+                            <br/> n. 表示问候， 惊奇或唤起注意时的用语
+                            <br/> n. (Hello)人名；(法)埃洛
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header ">
+                        <i class="method-number"></i>word 英 [wɜːd],美 [wɝd]
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            释义：
+                            <br/> n. [语] 单词；话语；消息；诺言；命令
+                            <br/> vt. 用言辞表达
+                            <br/> n. (Word)人名；(英)沃德
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header ">
+                        <i class="method-number"></i>breed [bri:d]
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            释义：
+                            <br/> v. 繁殖，养育
+                            <br/> n. 品种，血统
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header ">
+                        <i class="method-number">4</i>spill [spil]
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            释义：
+                            <br/> v. 溢出，洒，使 ... 流出，泄漏
+                            <br/> n. 溢出，流
+                            <br/> n. 木片，小杆
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header ">
+                        <i class="method-number"></i>campus ['kæmpəs]
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            释义：
+                            <br/> n. 校园，场地
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header ">
+                        <i class="method-number"></i>split [split]
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            释义：
+                            <br/> n. 劈开，裂片，裂口
+                            <br/> adj. 分散的
+                            <br/> v. 分离，分开，劈开
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header ">
+                        <i class="method-number"></i>bacteria [bæk'tiəriə]
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            释义：
+                            <br/> n. (复数)细菌
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header ">
+                        <i class="method-number"></i>consume [kən'sju:m]
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            释义：
+                            <br/> v. 消耗，花费，挥霍 词根：con共同，sume＝take拿，取－全部拿光－消费
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header ">
+                        <i class="method-number"></i>burst [bə:st]
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            释义：
+                            <br/> n. 破裂，阵，爆发
+                            <br/> v. 爆裂，迸发
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="method-number"></i>spit [spit]
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            释义：
+                            <br/> n. 唾液，口水，小雨
+                            <br/> n. 烤肉叉，海峡，海角
+                            <br/> v. 唾吐，吐出，降小雨
+                            <br/> vt. 用炙叉叉住
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="pagination">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active"><a href="#!">1</a></li>
+                <li class="waves-effect"><a href="#!">2</a></li>
+                <li class="waves-effect"><a href="#!">3</a></li>
+                <li class="waves-effect"><a href="#!">4</a></li>
+                <li class="waves-effect"><a href="#!">5</a></li>
+                <li class="waves-effect"><a href="#!">6</a></li>
+                <li class="waves-effect"><a href="#!">7</a></li>
+                <li class="waves-effect"><a href="#!">8</a></li>
+                <li class="waves-effect"><a href="#!">9</a></li>
+                <li class="waves-effect"><a href="#!">10</a></li>
+                <li class="waves-effect"><a href="#!">11</a></li>
+                <li class="waves-effect"><a href="#!">12</a></li>
+                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+        </div>
+        <div class="col s2">
+            <p style="color:#ff3c00;">当前进度第1页</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block scripts%}
@@ -20,6 +183,15 @@
         $('.collapsible').collapsible({
             accordion: false
         });
+
+        var text = $('.J-wordMean');
+        text.each(function () {
+            var word_arr = $(this).text().split(';');
+            var word_temp = word_arr.join('<br />');
+            $(this).next().html('').append(word_temp);
+        });
     });
+
+
 </script>
 {% endblock %}

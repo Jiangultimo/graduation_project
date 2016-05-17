@@ -50,9 +50,17 @@ router.post('/signup', function (req, res) {
         nickname = req.body.nickname,//昵称
         password = req.body.password,//密码
         planName = req.body.planName,
+        endPlan = req.body.endPlan,
+        curPage = req.body.curPage,
         re_password = req.body.re_password;//重复密码
-    if( planName == null || planName.length === 0 ){
+    if (planName == null || planName.length === 0) {
         planName = '';
+    }
+    if (endPlan == null || endPlan.length === 0) {
+        endPlan = false;
+    }
+    if (curPage == null || curPage.length === 0) {
+        curPage = false;
     }
     if (re_password !== password) {
         req.flash('error', '两次输入密码不一致');
@@ -65,17 +73,21 @@ router.post('/signup', function (req, res) {
         nickname: nickname,
         email: email,
         password: password,
-        planName:planName
+        planName: planName,
+        endPlan: endPlan,
+        curPage: curPage
     });
 
 //    检测用户名是否存在
     User.get(newUser.email, function (err, user) {
         if (err) {
+            console.log(err);
             req.flash('error', err);
             return res.redirect('/signup');
         }
         if (user) {
             req.flash('error', '用户已经存在');
+            console.log('已存在');
             return res.redirect('/signup');
         }
 
